@@ -16,17 +16,18 @@ import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Web_Lab_master'))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Web_Lab'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-qp2-c#l1qay!^r-%4*__g#$y(=dg(al-x&$$g8_v-=uj2(-xz6'
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['he2021105560.pythonanywhere.com', '127.0.0.1']
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['he2021105560.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
